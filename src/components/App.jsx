@@ -18,7 +18,6 @@ export default function App() {
   { id: 'id-4', name: 'Annie Copeland', number: '+380002023600' },
   { id: 'id-5', name: 'Rosie Simpson', number: '+382804000500' },
   { id: 'id-6', name: 'Hermione Kline', number: '+380020304050' },
-  { id: 'id-7', name: 'Eden Clements', number: '+380000300567' },
   { id: 'id-8', name: 'Annie Copeland', number: '+380204050600' },];
 
   const [contacts, setContacts] = useState(result => [...contactsFill]);
