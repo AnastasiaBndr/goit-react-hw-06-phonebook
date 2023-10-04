@@ -10,13 +10,13 @@ export const itemsSlice=createSlice({
            state.items.push(action.payload)
         },
         remove(state, action){
-            return state.items.filter(item=>item.id!==action.payload)
+            state.items=state.items.filter(item=>item.id!==action.payload)
         },
     }
 });
 
 const persistConfig={
-    key: 'root',
+    key: 'contacts',
     storage: storage,
     whitelist:['items']
 }

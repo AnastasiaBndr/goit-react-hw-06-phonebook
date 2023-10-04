@@ -9,11 +9,6 @@ const ContactList = () => {
 
     const onClickDelete = id => {
         dispatch(remove(id));
-
-        var contactsTemp=contacts;
-        contactsTemp=contactsTemp.filter(contact=>contact.id!==id)
-
-        localStorage.setItem("contacts", JSON.stringify(contactsTemp));
     }
     
     
