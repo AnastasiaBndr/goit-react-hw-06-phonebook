@@ -22,7 +22,7 @@ const ContactForm = () => {
     else if (!namePattern.test(name))
       Notiflix.Notify.failure("Name is incorrect!")
     else if (!numberPattern.test(number))
-      Notiflix.Notify.failure("Phone number is incorrect!")
+      Notiflix.Notify.failure("Phone number is incorrect! Accepted type is: +380000000000")
     else {
 
       if (contacts.find(contact => contact.number === number))
