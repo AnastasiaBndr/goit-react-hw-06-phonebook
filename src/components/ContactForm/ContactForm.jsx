@@ -7,16 +7,15 @@ import Notiflix from 'notiflix';
 const ContactForm = () => {
 
     const dispatch=useDispatch();
-    const contacts=useSelector(state=>state.items)
+    const contacts=useSelector(state=>state.items.items)
     
     const handleSubmit= async(e)=>{
         e.preventDefault();
         const number=e.currentTarget.elements.number.value;
         const name=e.currentTarget.elements.name.value;
 
-
         const namePattern = new RegExp("^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$");
-    const numberPattern = new RegExp("^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-/s/./0-9]*$");
+      const numberPattern = new RegExp("^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-/s/./0-9]*$");
 
     if (!namePattern.test(name) && !numberPattern.test(number))
       Notiflix.Notify.failure("Name and phone number are incorrect!");

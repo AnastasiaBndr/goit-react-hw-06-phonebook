@@ -4,7 +4,7 @@ import { remove } from "redux/itemsSlice";
 
 const ContactList = () => {
 
-    const contacts=useSelector(state=>state.items);
+    const contacts=useSelector(state=>state.items.items);
     const dispatch=useDispatch();
 
     const onClickDelete = id => {
